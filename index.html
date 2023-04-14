@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Registrasi</title>
+    <style>
+body {
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #121211;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #121211;
+  }
+
+ 
+  
+  .form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.231);
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0.5px solid #626262;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #444;
+  }
+  
+  button {
+    transition: 1s;
+    background-color: #ebebeb;
+    color: #fff;
+    border:  0.5px solid #ebebeb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:  #444;
+    cursor: pointer;
+  }
+  
+  button:hover {
+        transition: 0,5s;
+        background-color: #05bbff;
+        border-radius: 10px;
+        color: #000000;
+        cursor: pointer;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .bgclr{
+    background: linear-gradient( cyan, rgb(0, 115, 255))
+  }
+    </style>
+  </head>
+  <body class="bgclr">
+    <h1>Form Pendaftaran Peserta</h1>
+    <h2>SMKN 4 JAKARTA</h2>
+    
+    <br>
+
+    <div class="form">
+      <div class="form-group">
+        <label for="nama"><b>Nama</b></label>
+        <input type="text" id="Nama" name="nama"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="nis"><b>NIS</b></label>
+        <input type="number" id="Nis" name="nis"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="jurusan"><b>Mata Pelajaran</b></label>
+        <input type="text" id="Mapel" name="ttl"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="hp"><b>No. HP</b></label>
+        <input type="number" id="Nomor" name="hp"  autocomplete="off">
+      </div>
+      <button onclick="setOutput()"><b>Kirim</b></button>
+    </div>
+
+    <br><br>
+    
+
+    <h1 id="output"></h1>
+    <script>
+      function setOutput() {
+        const nama = document.getElementById('Nama')
+        const nis = document.getElementById('Nis')
+        const mapel = document.getElementById('Mapel')
+        const hp = document.getElementById('Nomor')
+        const output = document.getElementById('output')
+        output.innerHTML = nama.value + ' ' + nis.value + ' ' + mapel.value + ' ' + hp.value
+      }
+    </script>
+
+  </body>
+</html>
